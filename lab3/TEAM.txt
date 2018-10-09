@@ -1,0 +1,6 @@
+<pro2>
+implementation of CRUD.
+Jason Guerrero
+Abdul Babatunde
+"insert into book_audit_trail ( book_id, entry_msg)" + "values(?,?)" -- auditTrail insert.
+"select book_audit_trail.date_added, book_audit_trail.entry_msg from book inner  join book_audit_trail on  book_audit_trail.book_id = book.id where book.id = ?" -- auditTrail for a particular book.

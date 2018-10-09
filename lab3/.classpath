@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<accessrules>
+			<accessrule kind="accessible" pattern="javafx/**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="mysql-connector-java-5.1.40-bin.jar"/>
+	<classpathentry kind="lib" path="log4j-core-2.7.jar"/>
+	<classpathentry kind="lib" path="log4j-api-2.7.jar"/>
+	<classpathentry kind="con" path="org.jboss.ide.eclipse.as.classpath.core.ejb3.classpathContainer/WildFly 10.x"/>
+	<classpathentry kind="lib" path="C:/Users/STUDENT/Desktop/achitechtureFinalSlides/introToDBFinals/wildfly-10.1.0.Final/wildfly-10.1.0.Final/bin/client/jboss-client.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STUDENT/Desktop/achitechtureFinalSlides/introToDBFinals/wildfly-10.1.0.Final/wildfly-10.1.0.Final/jboss-modules.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STUDENT/Desktop/poi-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STUDENT/Desktop/serverCode.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

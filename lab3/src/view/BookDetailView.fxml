@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.0" minWidth="10.0" prefWidth="135.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="558.0" minWidth="10.0" prefWidth="465.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="bookTitle" prefHeight="25.0" prefWidth="453.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="YearPublished" prefHeight="25.0" prefWidth="394.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="bookIsbn" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Title" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Year Published " GridPane.rowIndex="2" />
+            <Label text="ISNB" GridPane.rowIndex="3" />
+            <ComboBox fx:id="publishers" prefHeight="25.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Publishers " GridPane.rowIndex="4" />
+            <Label text="Book Detail" textFill="#4d1313" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="bookimage" fitHeight="32.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="558.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="247.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="311.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextArea fx:id="summarySpace" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="77.0" prefWidth="247.0" GridPane.rowIndex="1" />
+            <TableView fx:id="bookAuthorTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#getAuthorBook" prefHeight="84.0" prefWidth="333.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columns>
+                <TableColumn fx:id="AutthorFName" prefWidth="94.0" text="first name" />
+                <TableColumn fx:id="authorLName" prefWidth="97.0" text="last name " />
+                  <TableColumn fx:id="authorRoyalty" onEditCommit="#onEdit" prefWidth="70.0" text="royalty" />
+                  <TableColumn fx:id="sign" prefWidth="113.0">
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                     </graphic>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Authors " textAlignment="CENTER" wrappingWidth="128.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Summary " textAlignment="CENTER" wrappingWidth="128.13671875" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="607.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="155.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="166.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="156.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="142.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="updatebt" mnemonicParsing="false" onAction="#updateBookDetail" prefHeight="25.0" prefWidth="127.0" text="Update" GridPane.halignment="CENTER" />
+            <Button fx:id="AuditTrail" mnemonicParsing="false" onAction="#ViewAuditTrail" prefHeight="25.0" prefWidth="123.0" text="Audit Trail " GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="deleteBt" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteBook" prefHeight="25.0" prefWidth="126.0" text="delete" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Button fx:id="addAuthorBt" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showListofAuthor" prefHeight="25.0" prefWidth="110.0" text="Add Author/s" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>

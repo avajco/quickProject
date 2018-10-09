@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="294.0" minHeight="0.0" prefHeight="94.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="103.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ChoiceBox fx:id="publisherList" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="generateBt" mnemonicParsing="false" onAction="#report" text="generate Publicher Report" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Publishers" wrappingWidth="81.80078125" GridPane.halignment="CENTER" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <Text fx:id="UserName" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="86.13671875" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>
